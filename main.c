@@ -36,9 +36,13 @@ double maxError(double arr1[], double arr2[], int size) {
 }
 
 int main() {
-    const int size = SIZE;
     struct timespec start, end;
-    double A[size*size], B[size*size], C[size*size], C1[size*size], C2[size*size];
+    const int size = SIZE;
+    double *A = malloc(sizeof(double)*size*size),
+           *B = malloc(sizeof(double)*size*size),
+           *C = malloc(sizeof(double)*size*size),
+           *C1 = malloc(sizeof(double)*size*size),
+           *C2 = malloc(sizeof(double)*size*size);
     printf("Matrix size: %d\n-------------\n", size);
 
     /* Benchmark 1 */
