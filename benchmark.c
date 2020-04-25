@@ -34,7 +34,7 @@ void benchmark3(double A[], double B[], double C[], int n) {
                                 b1 = B[k*n+j], b2 = B[(k+1)*n+j],
                                 b3 = B[k*n+(j+1)], b4 = B[(k+1)*n+(j+1)];
                 c1 += a1*b1 + a3*b2; c2 += a2*b1 + a4*b2;
-                c3 += a1*b3 + a2*b4; c4 += a2*b3 + a4*b4;
+                c3 += a1*b3 + a3*b4; c4 += a2*b3 + a4*b4;
             }
             C[i*n+j] = c1; C[(i+1)*n+j] = c2;
             C[i*n+(j+1)] = c3; C[(i+1)*n+(j+1)] = c4;
